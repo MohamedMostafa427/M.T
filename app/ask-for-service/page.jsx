@@ -3,12 +3,12 @@ import { useState } from 'react';
 import { MdCloudUpload } from 'react-icons/md';
 import { axiosInstance } from '@/lib/axiosInstance';
 import { POST_URL } from '@/constants/apiUrls';
-import { selectedServiceAtom } from '@/atoms/selectedServiceAtom';
+import { selectedServiceAtom1 ,selectedServiceAtom2 } from '@/atoms/selectedServiceAtom';
 import { useAtomValue } from 'jotai';
 
 export default function AskForService() {
-    const selectedService = useAtomValue(selectedServiceAtom);
-
+    const selectedService1 = useAtomValue(selectedServiceAtom1);
+    const selectedService2 = useAtomValue(selectedServiceAtom2);
     const [fileName, setFileName] = useState("");
 
     const [file, setFile] = useState(null);
@@ -57,14 +57,14 @@ export default function AskForService() {
 
     return (
         <div className='flex flex-col gap-12 mt-5'>
-            <h1 className='flex relative font-semibold text-2xl'>{selectedService.w} </h1>
+            <h1 className='flex relative font-semibold text-2xl'>{selectedService1} </h1>
             <form onSubmit={handleSubmit} className='flex flex-col gap-6 text-[#696f79]'>
                 <div className='w-[300px] sm:w-[500px] md:w-[700px] lg:w-[920px] flex flex-col'>
                     <label>نوع الخدمة</label>
                     <input
                         name=''
                         onChange={handleChange}
-                        value={selectedService.w}
+                        value={selectedService1}
                         readOnly
                         type="text"
                         className='lg:w-full h-12 rounded'
@@ -80,9 +80,9 @@ export default function AskForService() {
                         value={data.priority}
                         className='h-12 rounded'
                         name='priority'>
-                        {selectedService.a.map((e) => (
+                        {selectedService1 && (selectedService2.map((e) => (
                             <option >{e.level.name}</option>
-                        ))}
+                        )))}
 
                     </select>
                 </div>
