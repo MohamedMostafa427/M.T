@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const Loading = () => (
-    <div className="absolute top-[46%]">
+    <div className="absolute -translate-x-[50%] -translate-y-[50%] top-[50%] left-[50%]">
         <svg
             class="spinner"
             width="50px"

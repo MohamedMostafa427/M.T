@@ -4,6 +4,22 @@ import { useState } from "react";
 import { navTitle } from "./asets";
 export const HamBurgerIcon = () => {
     const [HamBurgerState, setHamBurgerState] = useState(false);
+    const variants = {
+        open: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                y: { stiffness: 1000, velocity: -100 }
+            }
+        },
+        closed: {
+            y: 50,
+            opacity: 0,
+            transition: {
+                y: { stiffness: 1000 }
+            }
+        }
+    };
     return (
         <div className="md:hidden flex relative z-10">
             <MotionConfig
@@ -63,7 +79,7 @@ export const HamBurgerIcon = () => {
                             }
                         }}
                     />
-                    { HamBurgerState && (
+                    {HamBurgerState && (
                         <motion.div
                             style={{
                                 x: "-200px"
@@ -78,14 +94,17 @@ export const HamBurgerIcon = () => {
                             }}
 
                             className='text-white justify-center rounded absolute h-[98dvh] w-[290%] left-[-7px]  bg-[#696f79] md:flex gap-5 md:gap-10'>
-                                <div className="justify-center relative top-24 flex flex-col gap-4">
-                            {navTitle.map((e) => 
-                                <div className="m-auto" key={e.id}>
-                                    <a href='#'>
-                                        {e.title}
-                                    </a>
-                                </div>
-                            )}
+                            <div className="justify-center relative top-24 flex flex-col gap-4">
+                                {navTitle.map((e) =>
+                                    <motion.div variants={variants}
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="m-auto" key={e.id}>
+                                        <a href='#'>
+                                            {e.title}
+                                        </a>
+                                    </motion.div>
+                                )}
                             </div>
                         </motion.div>
                     )}

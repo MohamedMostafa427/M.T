@@ -4,7 +4,7 @@ import Image from 'next/image';
 import me from "./asets/img/logo.png"
 export const Nav = () => {
     return (
-        <div className='flex items-center flex-row-reverse p-[1%] justify-between '>
+        <div className='sticky top-0 bg-inherit items-center flex flex-row-reverse p-[1%] justify-between '>
             <div>
                 <HamBurgerIcon/>
             </div>
