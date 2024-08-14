@@ -54,15 +54,7 @@ export default async function CardFirstPage() {
             </motion.h1>
             <div className="mx-auto flex w-full gap-8 items-center flex-wrap relative justify-center text-center">
                 {items.map((e, index) =>
-                    <motion.div
-                        custom={index}
-                        initial="hidden"
-                        animate="visible"
-                        variants={cardVariants}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        key={index}
-                    >
+                    
                         <Link href={e.services.length > 0 ? `/services/${e.id}` : `./notfoundPade`}>
                             <div className="w-72 bg-white rounded-lg shadow-md p-6 text-center relative">
                                 <div className={`absolute top-0 left-0 right-0 h-2 ${index < 3 || index > 6 ? "bg-[#658d96]" : "bg-[#d1b06b]"} rounded-t-lg`}></div>
@@ -75,7 +67,7 @@ export default async function CardFirstPage() {
                                 </div>
                             </div>
                         </Link>
-                    </motion.div>
+                    
                 )}
             </div>
         </div>
