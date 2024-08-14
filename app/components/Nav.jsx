@@ -4,11 +4,11 @@ import Image from 'next/image';
 import me from "./asets/img/logo.png"
 export const Nav = () => {
     return (
-        <div className='sticky top-0 bg-inherit items-center flex flex-row-reverse p-[1%] justify-between '>
+        <div className='bg-[#f9f9f9] z-10 rounded sticky top-0 items-center flex flex-row-reverse p-[1%] justify-between '>
             <div>
                 <HamBurgerIcon/>
             </div>
-            <div className='hidden md:flex gap-5 md:gap-10'>
+            <div className='  hidden md:flex gap-5 md:gap-10'>
                 {navTitle.map((e) => <div key={e.id}><a href='#'>{e.title}</a></div>)}
             </div>
             <div>

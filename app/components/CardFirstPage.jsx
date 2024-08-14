@@ -43,7 +43,7 @@ export default async function CardFirstPage() {
     };
 
     return (
-        <div className="relative w-[80%] flex flex-col justify-center text-center">
+        <div className="relative w-[80%] max-w-[1200px] flex flex-col justify-center text-center">
             <motion.h1
                 initial="hidden"
                 animate="visible"

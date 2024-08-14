@@ -32,7 +32,7 @@ export const HamBurgerIcon = () => {
                         left: "50%",
                         x: "-50%",
                     }}
-                        className="w-[50%] h-[3px] rounded-xl bg-black absolute z-10 "
+                        className="cursor-pointer w-[50%] h-[3px] rounded-xl bg-black absolute z-10 "
                         variants={{
                             open: {
                                 rotate: ["0deg", "0deg", "-45deg"],
@@ -50,7 +50,7 @@ export const HamBurgerIcon = () => {
                             x: "-50%"
 
                         }}
-                        className="  w-[50%] z-10 h-[3px] rounded-xl bg-black absolute "
+                        className=" cursor-pointer w-[50%] z-10 h-[3px] rounded-xl bg-black absolute "
                         variants={{
                             open: {
                                 rotate: ["0deg", "0deg", "45deg"]
@@ -67,7 +67,7 @@ export const HamBurgerIcon = () => {
                             x: "-50%"
 
                         }}
-                        className="z-10 w-[50%] h-[3px] rounded-xl bg-black absolute "
+                        className="cursor-pointer z-10 w-[50%] h-[3px] rounded-xl bg-black absolute "
                         variants={{
                             open: {
                                 rotate: ["0deg", "0deg", "45deg"],
