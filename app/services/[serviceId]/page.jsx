@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import me from "../../components/asets/img/message-text.png"
 import { ITEMS_URL } from '@/constants/apiUrls';
 import ServiceCard from '@/app/components/services/ServiceCard';
 
