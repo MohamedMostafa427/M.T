@@ -1,6 +1,6 @@
 "use client";
 import { useAtom } from 'jotai';
-import { selectedServiceAtom1, selectedServiceAtom2 } from '@/atoms/selectedServiceAtom';
+import { selectedServiceAtom1, selectedServiceAtom2 ,selectedServiceAtom3 } from '@/atoms/selectedServiceAtom';
 import Link from 'next/link';
 import Image from 'next/image';
 import me from '../asets/img/message-text.png';
@@ -9,10 +9,13 @@ import { motion } from 'framer-motion';
 export default function ServiceCard({ e, index }) {
     const [, setSelectedService1] = useAtom(selectedServiceAtom1);
     const [, setSelectedService2] = useAtom(selectedServiceAtom2);
+    const [, setSelectedService3] = useAtom(selectedServiceAtom3);
+
 
     const handleClick = () => {
         setSelectedService1(e.title);
         setSelectedService2(e.ymtaz_levels_prices);
+        setSelectedService3(e.id)
     };
 
     const cardVariants = {

@@ -21,7 +21,7 @@ export const HamBurgerIcon = () => {
         }
     };
     return (
-        <div className="md:hidden flex relative z-10">
+        <div className="md:hidden flex fixed top-0 left-0 z-10">
             <MotionConfig
 
             >
